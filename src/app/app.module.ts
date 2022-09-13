@@ -21,7 +21,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { GamesComponent } from './pages/post-detail/games.component';
 import { ContentContainerComponent } from './shared/components/content-container/content-container.component';
 import { SanitizeUrlPipe } from './shared/pipes/sanitize-url.pipe';
 import { PostsService } from './shared/services/posts.service';
@@ -40,7 +40,7 @@ const routes: Routes = [
     SearchboxComponent,
     NavbarComponent,
     SanitizeUrlPipe,
-    PostDetailComponent,
+    GamesComponent,
     ContentContainerComponent
   ],
   imports: [
