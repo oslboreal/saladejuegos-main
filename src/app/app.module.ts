@@ -27,9 +27,16 @@ import { SanitizeUrlPipe } from './shared/pipes/sanitize-url.pipe';
 import { PostsService } from './shared/services/posts.service';
 import { SearchResolverResolver } from './shared/resolvers/search-resolver.resolver';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: GamesComponent },
+  { path: 'aboutMe', component: PersonalInformationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signUp', component: SignupComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
@@ -41,7 +48,10 @@ const routes: Routes = [
     NavbarComponent,
     SanitizeUrlPipe,
     GamesComponent,
-    ContentContainerComponent
+    ContentContainerComponent,
+    LoginComponent,
+    SignupComponent,
+    PersonalInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +65,7 @@ const routes: Routes = [
     MatInputModule,
     MatTableModule,
     MatListModule,
+    MatButtonModule,
     FlexLayoutModule,
     /* Data access modules */
     provideFirebaseApp(() => initializeApp(environment.firebase)),

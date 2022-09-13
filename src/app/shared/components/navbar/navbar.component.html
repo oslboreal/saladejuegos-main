@@ -1,24 +1,31 @@
 <div id="navbar" fxLayout="row" fxLayoutAlign="space-between center">
     <div id="navbarFirst">
-        <span>LPR</span>
+        <span>GAMES</span>
     </div>
     <div id="navbardSecond" fxLayout="row" fxLayoutAlign="none center">
         <div class="navBarItem" style=" border-bottom: 1px solid white;" href="#" mat-button>
-            Home
+            <a [routerLink]="['/home']">Home</a>
         </div>
         <div class="navBarItem" href="#" mat-button>
-            Categories
-        </div>
-        <div class="navBarItem" href="#" mat-button>
-            Youtube
-        </div>
-        <div class="navBarItem" href="#" mat-button>
-            Contact us
+            <a [routerLink]="['/aboutMe']">About me</a>
         </div>
     </div>
     <div id="navbarThird" fxLayout="row" fxLAyoutAlign="none center">
-        <div class="navbarRightButton">LOG IN</div>
+        <div *ngIf="auth.user | async as user;" class="navbarRightButton" (click)="logout()">Welcome {{ auth.user |
+            async}}</div>
         <hr>
-        <div class="navbarRightButton">REGISTER</div>
+        <div *ngIf="auth.user | async as user; else showLogin" class="navbarRightButton" (click)="logout()"> <a [routerLink]="['/home']">LOG OUT</a></div>
+
+        <ng-template #showLogin>
+            <div class="navbarRightButton">
+                <a [routerLink]="['/login']">LOGIN</a>
+            </div>
+
+            <hr>
+
+            <div class=" navbarRightButton">
+                <a [routerLink]="['/signUp']">REGISTER</a>
+            </div>
+        </ng-template>
     </div>
 </div>
