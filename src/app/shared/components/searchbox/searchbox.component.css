@@ -1,0 +1,10 @@
+::ng-deep .mat-form-field-flex {
+    color: black;
+    padding: 0.0rem 0rem 0.3rem 1.5rem !important;
+    background-color: white !important;
+    border-radius: 300px !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}

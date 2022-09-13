@@ -1,0 +1,7 @@
+<div>
+    <form [formGroup]="formGroup">
+        <mat-form-field appearance="fill" style="width: 40rem;">
+            <input formControlName="searchInput" class="searchInput" type="text" matInput placeholder="Ex. Canon in D" (keyup.enter)="onEnter()">
+        </mat-form-field>
+    </form>
+</div>

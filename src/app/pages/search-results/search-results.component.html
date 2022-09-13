@@ -1,0 +1,23 @@
+<app-content-container>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <div id="searchBoxContainer">
+            <app-searchbox></app-searchbox>
+        </div>
+        <div id="searchResultContainer">
+            <span id="searchResultInformation">Showing {{ showingResultsCount }} results for {{ searchText }}</span>
+
+            <mat-list>
+                <mat-list-item *ngFor="let post of searchResults | async">
+                    <!-- Miniature -->
+                    <img class="miniature" src="https://img.youtube.com/vi/{{post.videoId}}/0.jpg" [alt]="post.title"
+                        srcset="">
+
+                    <div class="text-container" fxLayout="column" fxLayoutAlign="start">
+                        <span class="text-title">{{post.title}}</span>
+                        <span>{{post.author}}</span>
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</app-content-container>

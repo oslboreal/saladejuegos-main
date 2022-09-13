@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+#navbar {
+    background-color: black;
+    margin: 2rem;
+}
+
+.navbarRightButton {
+    color: white;
+    padding: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    width: 5rem;
+    text-align: center;
+}
+
+.navBarItem {
+    color: white;
+    padding: 1.2rem;
+    font-size: small;
+}
+
+#navbarThird {
+    background: radial-gradient(farthest-side at 1px 1px,
+            rgb(63, 96, 241) 0%, rgb(0, 0, 0) 150%);
+}
+
+#navbarFirst {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    padding-left: 1rem;
+}
+
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.329);
+}
+
+ul {
+    color: white;
+    list-style: none;
+}

@@ -1,0 +1,13 @@
+.contentContainer{
+    border: 1px solid red;
+    width: 60rem;
+    background-color: rgba(172, 172, 172, 0.685);
+}
+
+.addContainer{
+    border: 1px solid red;
+    color: white;
+    width: 10rem;
+    height: 100%;
+    background-color: rgba(172, 172, 172, 0.685);
+}
