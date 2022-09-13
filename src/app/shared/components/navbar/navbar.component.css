@@ -5,6 +5,11 @@
     margin: 2rem;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .navbarRightButton {
     color: white;
     padding: 1.3rem;

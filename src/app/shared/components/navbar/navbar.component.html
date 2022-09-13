@@ -11,9 +11,7 @@
         </div>
     </div>
     <div id="navbarThird" fxLayout="row" fxLAyoutAlign="none center">
-        <div *ngIf="auth.user | async as user;" class="navbarRightButton" (click)="logout()">Welcome {{ auth.user |
-            async}}</div>
-        <hr>
+        <div *ngIf="auth.user | async as user;" class="navbarRightButton">{{ user.email }}</div>
         <div *ngIf="auth.user | async as user; else showLogin" class="navbarRightButton" (click)="logout()"> <a [routerLink]="['/home']">LOG OUT</a></div>
 
         <ng-template #showLogin>

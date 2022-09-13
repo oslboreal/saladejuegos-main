@@ -4,13 +4,12 @@
 
 export const environment = {
   firebase: {
-    projectId: 'piano-learning-resources',
-    appId: '1:458932446886:web:9dbd289de0b50105677667',
-    storageBucket: 'piano-learning-resources.appspot.com',
-    apiKey: 'AIzaSyBdGC7qGHKyU7nsNpOGBTHHIdvo-SlHSEE',
-    authDomain: 'piano-learning-resources.firebaseapp.com',
-    messagingSenderId: '458932446886',
-    measurementId: 'G-TJJM5EHXPG',
+    apiKey: "AIzaSyAgPxdOoIs3iGSZVaL8hZrgxdocFhN66GE",
+    authDomain: "vallejo-saladejuegos.firebaseapp.com",
+    projectId: "vallejo-saladejuegos",
+    storageBucket: "vallejo-saladejuegos.appspot.com",
+    messagingSenderId: "1000520849634",
+    appId: "1:1000520849634:web:4f09c712b5296ae2b6e6bb"
   },
   production: false
 };
