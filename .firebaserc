@@ -1,14 +1,5 @@
 {
-  "targets": {
-    "piano-learning-resources": {
-      "hosting": {
-        "pianolearningresources": [
-          "piano-learning-resources"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "piano-learning-resources"
+    "default": "vallejo-saladejuegos"
   }
 }
