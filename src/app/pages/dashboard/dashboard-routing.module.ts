@@ -17,7 +17,7 @@ const routes: Routes = [
     { path: 'mayormenor' , pathMatch: 'full',component: MayorMenorPageComponent },
     { path: 'preguntados' , pathMatch: 'full',component: PreguntadosPageComponent },
     { path: 'snake' , pathMatch: 'full',component: SnakePageComponent },
-    { path: 'encuesta' , pathMatch: 'full',component: PollPageComponent },
+    { path: 'poll' , pathMatch: 'full',component: PollPageComponent },
   ] },
   { path: 'cv',component: CvPageComponent },
   { path: '**', pathMatch: 'full', component: NotFoundComponent }
