@@ -10,6 +10,10 @@ form {
   width: 100%;
 }
 
+#autofillButton{
+  margin-top: 2rem;
+}
+
 .login-content {
   width: 400px;
   display: block;

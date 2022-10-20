@@ -31,6 +31,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
 import { MatButtonModule } from '@angular/material/button';
+import { ErrorDialogComponent } from './shared/errors/error-dialog/error-dialog.component';
 
 const routes: Routes = [
   { path: 'home', component: GamesComponent },
@@ -51,7 +52,8 @@ const routes: Routes = [
     ContentContainerComponent,
     LoginComponent,
     SignupComponent,
-    PersonalInformationComponent
+    PersonalInformationComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,

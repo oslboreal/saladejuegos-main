@@ -15,21 +15,23 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder, public auth: AngularFireAuth) { }
 
-  onSubmit() {
+  onTestUserClick() {
     this.loginForm.controls.username.setValue('admin@admin.com');
     this.loginForm.controls.password.setValue('admin123');
-    let username = this.loginForm.controls.username.value;
-    let password = this.loginForm.controls.password.value;
-    // admin@admin.com
-    // admin123
+  }
+
+  onSubmit() {
+    const username = this.loginForm.controls.username.value;
+    const password = this.loginForm.controls.password.value;
+
     if (username && password) {
-      this.auth.signInWithEmailAndPassword(username, password).then(() => {
-        this.auth.user.subscribe(x => console.log(x));
-      });
+        this.auth.signInWithEmailAndPassword(username, password).then(() => {
+
+        }).catch((error) => {
+        });
     }
   }
 
   ngOnInit(): void {
   }
-
 }
