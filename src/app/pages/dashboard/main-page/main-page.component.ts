@@ -40,7 +40,7 @@ export class MainPageComponent implements OnInit {
       this.preguntadosScore = score;
     });
 
-    this.getUserHighScores('mayor-menor').then((score) => {
+    this.getUserHighScores('greater-or-lower').then((score) => {
       this.mayorMenorScore = score;
     });
 
@@ -52,7 +52,7 @@ export class MainPageComponent implements OnInit {
 
     });
 
-    this.getMayorMenorHighScores('mayor-menor').then(() => {
+    this.getMayorMenorHighScores('greater-or-lower').then(() => {
 
     });
 

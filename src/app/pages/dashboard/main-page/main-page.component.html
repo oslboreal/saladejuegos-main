@@ -29,8 +29,8 @@
             <ng-template #elseBlock>PREGUNTADOS: 0 POINTS</ng-template>
           </div>
           <div>
-            <p *ngIf="snakeScore; else elseBlock2">LA VIBORA: {{snakeScore}} POINTS</p>
-            <ng-template #elseBlock2>LA VIBORA: 0 POINTS</ng-template>
+            <p *ngIf="snakeScore; else elseBlock2">SNAKE: {{snakeScore}} POINTS</p>
+            <ng-template #elseBlock2>SNAKE: 0 POINTS</ng-template>
           </div>
           <div>
             <p *ngIf="mayorMenorScore; else elseBlock3">GREATER OR LOWER: {{mayorMenorScore}} POINTS</p>
@@ -39,10 +39,9 @@
           <hr>
           <h1>HALL OF THE FAME</h1>
           <hr>
+
+          <p>SNAKE: {{snakeHighScore}} POINTS - PLAYER: {{ snakeHighScoreUser}} </p>
           <p>PREGUNTADOS: {{preguntadosHighScore}} POINTS - PLAYER: {{ preguntadosHighScoreUser}} </p>
-
-          <p>LA VIBORA: {{snakeHighScore}} POINTS - PLAYER: {{ snakeHighScoreUser}} </p>
-
           <p>GREATER OR LOWER: {{mayorMenorHighScore}} POINTS - PLAYER: {{ mayorMenorHighScoreUser}} </p>
         </div>
       </div>

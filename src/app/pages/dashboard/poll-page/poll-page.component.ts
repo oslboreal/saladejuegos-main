@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
-  selector: 'app-encuesta-page',
+  selector: 'app-poll-page',
   templateUrl: './poll-page.component.html',
   styleUrls: ['./poll-page.component.css']
 })
@@ -13,8 +13,8 @@ export class PollPageComponent implements OnInit {
   form: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private toastr: ToastrService,
-              public auth: AuthService) {  }
+    private toastr: ToastrService,
+    public auth: AuthService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -29,21 +29,21 @@ export class PollPageComponent implements OnInit {
   }
 
   onSubmit() {
-    
+
     if (this.form.valid) {
       console.log(this.form.value);
       this.auth.SetUserSurvey(this.form.value);
-      this.toastr.success('Encuesta enviada con éxito', '', {
+      this.toastr.success('Poll sent successfully..', '', {
         timeOut: 1500,
-        positionClass: 'toast-center-center',      
+        positionClass: 'toast-center-center',
       });
       this.form.reset();
     } else {
-      this.toastr.warning('REVISE LOS CAMPOS DEL FORMULARIO' , '', {
+      this.toastr.warning('Please check the input you provided..', '', {
         timeOut: 1500,
-        positionClass: 'toast-center-center',      
+        positionClass: 'toast-center-center',
       });
-    } 
+    }
   }
 
 }
