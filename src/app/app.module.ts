@@ -11,11 +11,11 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CvPageComponent } from './navigation/cv-page/cv-page.component';
-import { NotFoundComponent } from './navigation/not-found/not-found.component';
+import { CvPageComponent } from './pages/cv-page/cv-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { NgModule } from '@angular/core';
-import { CustomHttpInterceptor } from './services/http-interceptor';
+import { CustomHttpInterceptor } from './shared/services/http-interceptor';
 
 @NgModule({
   declarations: [
