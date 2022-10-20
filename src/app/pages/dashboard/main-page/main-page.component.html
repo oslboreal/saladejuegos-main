@@ -1,17 +1,21 @@
 <div class="container">
- 
-  <div class="row align-items-md-stretch">
 
+  <div class="row align-items-md-stretch">
+    <div class="col-md-4 ">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <app-chat></app-chat>
+      </div>
+    </div>
     <div class="col-md-8">
       <div class="h-100 p-5 text-bg-dark rounded-3">
         <h1>PROFILE</h1>
         <hr>
         <div *ngIf="authService.userData as user">
           <div class="row align-items-md-stretch">
-              <div class="col-md-2">
-            <img class="img-thumbnail img-fluid"
-              src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
-              </div>
+            <div class="col-md-2">
+              <img class="img-thumbnail img-fluid" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                alt="{{user.displayName}}">
+            </div>
             <div class="col-md-6 info">
               <p>Usuario: <strong>{{(user.displayName)}}</strong></p>
               <p>Email: <strong>{{user.email}}</strong></p>
@@ -29,34 +33,20 @@
             <ng-template #elseBlock2>LA VIBORA: 0 POINTS</ng-template>
           </div>
           <div>
-            <p *ngIf="mayorMenorScore; else elseBlock3">MAYOR O MENOR: {{mayorMenorScore}} POINTS</p>
-            <ng-template #elseBlock3>MAYOR O MENOR: 0 POINTS</ng-template>
+            <p *ngIf="mayorMenorScore; else elseBlock3">GREATER OR LOWER: {{mayorMenorScore}} POINTS</p>
+            <ng-template #elseBlock3>GREATER OR LOWER: 0 POINTS</ng-template>
           </div>
           <hr>
           <h1>HALL OF THE FAME</h1>
           <hr>
-          <p>PREGUNTADOS: {{preguntadosHighScore}} PUNTOS - JUGADOR: {{ preguntadosHighScoreUser}} </p>
-          
-          <p>LA VIBORA: {{snakeHighScore}} PUNTOS - JUGADOR: {{ snakeHighScoreUser}} </p>
-          
-          <p>MAYOR O MENOR: {{mayorMenorHighScore}} PUNTOS - JUGADOR: {{ mayorMenorHighScoreUser}} </p>
+          <p>PREGUNTADOS: {{preguntadosHighScore}} POINTS - PLAYER: {{ preguntadosHighScoreUser}} </p>
+
+          <p>LA VIBORA: {{snakeHighScore}} POINTS - PLAYER: {{ snakeHighScoreUser}} </p>
+
+          <p>GREATER OR LOWER: {{mayorMenorHighScore}} POINTS - PLAYER: {{ mayorMenorHighScoreUser}} </p>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4 ">
-      <div class="h-100 p-5 bg-light border rounded-3">
-        <app-chat></app-chat>
-      </div>
-    </div>
-
   </div>
 
 </div>
-
-
-
-
-
-
-
