@@ -17,8 +17,8 @@ import {
 import { User } from '../services/user';
 
 import { Injectable } from '@angular/core';
-import { LoginData } from '../interfaces/login-data.interface';
-import { RegisterData } from '../interfaces/register-data.interface';
+import { LoginData } from '../../interfaces/login-data.interface';
+import { RegisterData } from '../../interfaces/register-data.interface';
 import firebase from 'firebase/compat/app';
 import { of } from 'rxjs';
 

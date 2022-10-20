@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MayorMenorService } from 'src/app/services/mayor-menor.service';
-import { AuthService } from 'src/app/services/auth.service';
+import { MayorMenorService } from 'src/app/shared/services/mayor-menor.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { SpinnerService } from 'src/app/shared/services/spinner.service';
 
 @Component({
   selector: 'app-mayor-menor-page',

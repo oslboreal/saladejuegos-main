@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AhorcadoService } from 'src/app/services/ahorcado.service';
+import { AhorcadoService } from 'src/app/shared/services/ahorcado.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

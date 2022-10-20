@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PreguntadosService } from 'src/app/services/preguntados.service';
+import { PreguntadosService } from 'src/app/shared/services/preguntados.service';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from 'src/app/services/auth.service';
-import { SpinnerService } from 'src/app/services/spinner.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { SpinnerService } from 'src/app/shared/services/spinner.service';
 
 @Component({
   selector: 'app-preguntados-page',
@@ -19,11 +19,11 @@ export class PreguntadosPageComponent implements OnInit {
   array = [];
   points: number = 0;
 
-  
+
   constructor(private toastr: ToastrService,
-              private service: PreguntadosService,
-              public auth: AuthService,
-              public spinnerService: SpinnerService) { }
+    private service: PreguntadosService,
+    public auth: AuthService,
+    public spinnerService: SpinnerService) { }
 
   ngOnInit(): void {
     this.getQuestionCharacter();
@@ -58,22 +58,22 @@ export class PreguntadosPageComponent implements OnInit {
 
   checkAnswer(answer) {
     if (answer === this.characterName) {
-      this.toastr.success('Correcto!', '' , {
-                            timeOut: 3000,
-                            positionClass: 'toast-center-center',      
-                          });
-      this.points ++;
+      this.toastr.success('Correcto!', '', {
+        timeOut: 3000,
+        positionClass: 'toast-center-center',
+      });
+      this.points++;
     } else {
-      this.auth.SetScore("preguntados",this.points);
-      this.toastr.warning('Puntaje: ' + this.points, 
-                          'Incorrecto!' + ' ' + 'La respuesta correcta es:' + ' ' + this.characterName, {
-                          timeOut: 3000,
-                          positionClass: 'toast-center-center',      
-                        });
-      
+      this.auth.SetScore("preguntados", this.points);
+      this.toastr.warning('Puntaje: ' + this.points,
+        'Incorrecto!' + ' ' + 'La respuesta correcta es:' + ' ' + this.characterName, {
+        timeOut: 3000,
+        positionClass: 'toast-center-center',
+      });
+
       this.points = 0;
     }
     this.array = [];
-    this.getQuestionCharacter();                          
+    this.getQuestionCharacter();
   }
 }

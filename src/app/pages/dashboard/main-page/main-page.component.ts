@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-main-page',
@@ -9,20 +9,20 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class MainPageComponent implements OnInit {
 
-  user:any;
+  user: any;
   score: any;
-  snakeScore:any;
-  preguntadosScore:any;
-  mayorMenorScore:any;
-  snakeHighScore:any;
-  preguntadosHighScore:any;
-  mayorMenorHighScore:any;
-  snakeHighScoreUser:any;
-  preguntadosHighScoreUser:any;
-  mayorMenorHighScoreUser:any;
-  
+  snakeScore: any;
+  preguntadosScore: any;
+  mayorMenorScore: any;
+  snakeHighScore: any;
+  preguntadosHighScore: any;
+  mayorMenorHighScore: any;
+  snakeHighScoreUser: any;
+  preguntadosHighScoreUser: any;
+  mayorMenorHighScoreUser: any;
+
   constructor(public authService: AuthService,) { }
- 
+
 
   ngOnInit(): void {
     this.authService.getAuth().subscribe(user => {
@@ -31,11 +31,11 @@ export class MainPageComponent implements OnInit {
       }
     });
 
-    this.getScores();   
+    this.getScores();
   }
 
-  
-  getScores(){
+
+  getScores() {
     this.getUserHighScores('preguntados').then((score) => {
       this.preguntadosScore = score;
     });
@@ -49,19 +49,19 @@ export class MainPageComponent implements OnInit {
     });
 
     this.getPreguntadosHighScores('preguntados').then(() => {
-          
+
     });
 
     this.getMayorMenorHighScores('mayor-menor').then(() => {
-     
+
     });
 
     this.getSnakeHighScores('snake').then(() => {
-     
+
     });
   }
 
-  getUserHighScores(game){    
+  getUserHighScores(game) {
     let result = new Promise((resolve, reject) => {
       this.authService.getUserHighScore(game).then((score) => {
         resolve(score);
@@ -72,7 +72,7 @@ export class MainPageComponent implements OnInit {
   }
 
 
-  getMayorMenorHighScores(game){
+  getMayorMenorHighScores(game) {
     let result = new Promise((resolve, reject) => {
       this.authService.getGameHighScore(game).then((data) => {
         resolve(data);
@@ -83,7 +83,7 @@ export class MainPageComponent implements OnInit {
     return result;
   }
 
-  getSnakeHighScores(game){
+  getSnakeHighScores(game) {
     let result = new Promise((resolve, reject) => {
       this.authService.getGameHighScore(game).then((data) => {
         resolve(data);
@@ -94,7 +94,7 @@ export class MainPageComponent implements OnInit {
     return result;
   }
 
-  getPreguntadosHighScores(game){
+  getPreguntadosHighScores(game) {
     let result = new Promise((resolve, reject) => {
       this.authService.getGameHighScore(game).then((data) => {
         resolve(data);
