@@ -1,17 +1,17 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="./">Sala De Juegos</a>
+    <a class="navbar-brand" routerLink="./">GAME ROOM</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse d-flex" id="navbarNavAltMarkup">
         <div class="navbar-nav p-2">
-            <a class="nav-item nav-link" routerLink="./ahorcado">AHORCADO</a>
-            <a class="nav-item nav-link" routerLink="./mayormenor">MAYOR O MENOR</a>
+            <a class="nav-item nav-link" routerLink="./ahorcado">HANGMAN</a>
+            <a class="nav-item nav-link" routerLink="./mayormenor">GREATER OR LOWER</a>
             <a class="nav-item nav-link" routerLink="./preguntados">PREGUNTADOS</a>
-            <a class="nav-item nav-link" routerLink="./snake">LA SERPIENTE</a>
-            <a class="nav-item nav-link" routerLink="./encuesta">ENCUESTA</a>
+            <a class="nav-item nav-link" routerLink="./snake">SNAKE</a>
         </div>
     </div>
-    <button class="btn ml-auto p-2" type="submit" (click)="logout()">Cerrar Sesión</button>
+    <a class="btn ml-auto p-2" style="margin-right: 1rem;" routerLink="./encuesta">What do you think about us?</a>
+    <button class="btn ml-auto p-2" type="submit" (click)="logout()">Logout</button>
 </nav>

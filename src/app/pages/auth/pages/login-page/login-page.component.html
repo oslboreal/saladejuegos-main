@@ -9,16 +9,17 @@
             <button style="width: 100%; color: white" routerLink="/register">Registrarse</button>
         </div>
         <div class="form-container">
-                <h1>SALA DE JUEGOS</h1>
-                       <br>
+            <h1>GAME ROOM</h1>
+            <br>
             <app-login-form (formData)="login($event)"></app-login-form>
             <br>
-            <a class="btn btn-light border-dark" style="background-color: #ffffff;" role="button" (click)="loginWithGoogle()">
+            <a class="btn btn-light border-dark" style="background-color: #ffffff;" role="button"
+                (click)="loginWithGoogle()">
                 <i class="bi bi-google me-2" style="color: cornflowerblue;"></i>
                 INICIAR SESIÓN CON GOOGLE
             </a>
         </div>
-        
+
     </div>
 </div>
 

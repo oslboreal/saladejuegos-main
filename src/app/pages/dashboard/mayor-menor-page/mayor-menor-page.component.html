@@ -3,9 +3,9 @@
   <div class="p-2 mb-2 bg-light rounded-3">
     <div class="container-fluid py-1">
       <div>
-        <h2>MAYOR O MENOR</h2>
-        <p>Desde un mazo de carta se va a preguntar si la siguiente carta sera mayor o menor. El jugador sumará un punto
-          ante cada carta que adivine.
+        <h2>GREATER OR LOWER</h2>
+        <p>
+          Take a guess, pick an option between greater or lower.
         <p>
       </div>
     </div>
@@ -43,7 +43,7 @@
           ¡GANASTE!
         </div>
         <div *ngIf="result == false" class="alert alert-danger" role="alert">
-          PERDISTE...
+          GAME OVER...
         </div>
         <div *ngIf="result == null">
           <br>

@@ -34,12 +34,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "4mb", 
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4mb", 
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 }
               ],
@@ -104,8 +104,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "salaDeJuegos:build:production",
-            "firebaseProject": "saladejuegos-gonzalo-sinnott",
-            "firebaseHostingSite": "saladejuegos-gonzalo-sinnott"
+            "firebaseProject": "vallejo-saladejuegos",
+            "firebaseHostingSite": "vallejo-saladejuegos"
           }
         }
       }

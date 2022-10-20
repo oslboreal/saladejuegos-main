@@ -88,7 +88,7 @@ export class MayorMenorPageComponent implements OnInit {
   }
 
   showResult() {
-    this.toastr.warning('Puntuación final: ' + this.points + ' puntos', 'PERDISTE...', {
+    this.toastr.warning('Puntuación final: ' + this.points + ' points', 'GAME OVER...', {
       timeOut: 3000,
       positionClass: 'toast-center-center',      
     });
