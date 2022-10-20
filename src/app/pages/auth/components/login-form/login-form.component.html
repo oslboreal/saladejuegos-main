@@ -1,0 +1,33 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-control">
+      <mat-label>Correo electronico</mat-label>
+      <input matInput formControlName="email" type="text" autocomplete="off" required />
+      <mat-error *ngIf="email?.hasError('required')">
+        El correo electronico es obligatorio
+      </mat-error>
+      <mat-error *ngIf="email?.hasError('email')">
+        El correo electrónico no es válido. Por favor introduzca una dirección de correo electrónico válida.
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-control">
+      <mat-label>Contraseña</mat-label>
+      <input matInput formControlName="password" type="password" autocomplete="off" required />
+      <mat-error *ngIf="password?.hasError('required')">
+        La contraseña es obligatoria.
+      </mat-error>
+    </mat-form-field>
+    <br>
+      <button [disabled]="form.invalid" style="width:100%" mat-raised-button type="submit">
+        Ingresar
+      </button>
+      <br>      
+  </form>
+  <div class="d-flex justify-content-center">
+    <button mat-raised-button 
+            style="width:100%" 
+            (click)="fillForm()">
+      Ingreso Rapido USUARIO
+    </button>
+  </div>
+  

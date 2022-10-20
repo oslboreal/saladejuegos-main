@@ -1,0 +1,32 @@
+<div class="background">
+    <div class="login-container">
+        <div class="text-container">
+            <img src='/assets/logo.png' class="img-responsive" style="width: 100%;">
+            <h1>¡Hola!</h1>
+            <p>
+                Si aun no tienes cuenta, puedes registrarte haciendo click en el boton de abajo.
+            </p>
+            <button style="width: 100%; color: white" routerLink="/register">Registrarse</button>
+        </div>
+        <div class="form-container">
+                <h1>SALA DE JUEGOS</h1>
+                       <br>
+            <app-login-form (formData)="login($event)"></app-login-form>
+            <br>
+            <a class="btn btn-light border-dark" style="background-color: #ffffff;" role="button" (click)="loginWithGoogle()">
+                <i class="bi bi-google me-2" style="color: cornflowerblue;"></i>
+                INICIAR SESIÓN CON GOOGLE
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+<footer id="sticky-footer" class="fixed-bottom flex-shrink-0 py-2 bg-dark text-white-50">
+    <div class="container d-flex justify-content-center align-items-center">
+        <small class="me-2">2022 &copy; Gonzalo Sinnott Segura</small>
+        <button class="btn btn-light border-dark" style="background-color: #ffffff;" role="button" routerLink="./cv">
+            QUIEN SOY
+        </button>
+    </div>
+</footer>
