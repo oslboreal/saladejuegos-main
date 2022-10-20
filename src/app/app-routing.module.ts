@@ -1,4 +1,4 @@
-import {   canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
@@ -12,30 +12,30 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./navigation/auth/auth.module').then((m) => m.AuthModule),
-      ...canActivate(redirectLoggedInToHome),
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+    ...canActivate(redirectLoggedInToHome),
   },
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./navigation/dashboard/dashboard.module').then(
+      import('./pages/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
-      ...canActivate(redirectUnauthorizedToLogin),
-      data: {
-        role: 'USER'
-      }
+    ...canActivate(redirectUnauthorizedToLogin),
+    data: {
+      role: 'USER'
+    }
   },
   {
     path: 'admin-dashboard',
     loadChildren: () =>
-      import('./navigation/admin-dashboard/admin-dashboard.module').then(
+      import('./pages/admin-dashboard/admin-dashboard.module').then(
         (m) => m.AdminDashboardModule
       ),
-      ...canActivate(redirectUnauthorizedToLogin),
-      data: {
-        role: 'ADMIN'
-      }
+    ...canActivate(redirectUnauthorizedToLogin),
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: '**',
@@ -48,4 +48,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
