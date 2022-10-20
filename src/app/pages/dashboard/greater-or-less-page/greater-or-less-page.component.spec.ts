@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MayorMenorPageComponent } from './mayor-menor-page.component';
+import { MayorMenorPageComponent } from './greater-or-less-page.component';
 
 describe('MayorMenorPageComponent', () => {
   let component: MayorMenorPageComponent;

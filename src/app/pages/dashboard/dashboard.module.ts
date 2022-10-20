@@ -10,7 +10,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AhorcadoPageComponent } from './ahorcado-page/ahorcado-page.component';
 import { RouterModule } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
-import { MayorMenorPageComponent } from './mayor-menor-page/mayor-menor-page.component';
+import { MayorMenorPageComponent } from './greater-or-less-page/greater-or-less-page.component';
 import { PreguntadosPageComponent } from './preguntados-page/preguntados-page.component';
 import { SnakePageComponent } from './snake-page/snake-page.component';
 import { EncuestaPageComponent } from './encuesta-page/encuesta-page.component';

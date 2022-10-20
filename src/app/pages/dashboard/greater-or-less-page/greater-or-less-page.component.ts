@@ -6,8 +6,8 @@ import { SpinnerService } from 'src/app/shared/services/spinner.service';
 
 @Component({
   selector: 'app-mayor-menor-page',
-  templateUrl: './mayor-menor-page.component.html',
-  styleUrls: ['./mayor-menor-page.component.css'],
+  templateUrl: './greater-or-less-page.component.html',
+  styleUrls: ['./greater-or-less-page.component.css'],
 })
 export class MayorMenorPageComponent implements OnInit {
   
