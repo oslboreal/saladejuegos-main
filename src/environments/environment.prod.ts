@@ -1,3 +1,5 @@
+/* Juan Marcos Vallejo : Environment configuration */
+
 export const environment = {
   firebase: {
     apiKey: "AIzaSyAgPxdOoIs3iGSZVaL8hZrgxdocFhN66GE",
