@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   templateUrl: './poll-page.component.html',
   styleUrls: ['./poll-page.component.css']
 })
-export class EncuestaPageComponent implements OnInit {
+export class PollPageComponent implements OnInit {
 
   form: FormGroup;
 
