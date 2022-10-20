@@ -10,7 +10,7 @@ import { SpinnerService } from 'src/app/shared/services/spinner.service';
   styleUrls: ['./greater-or-less-page.component.css'],
 })
 export class MayorMenorPageComponent implements OnInit {
-  
+
   cardValue: number;
   oldCardValue: number;
   cardImage: any;
@@ -19,9 +19,9 @@ export class MayorMenorPageComponent implements OnInit {
   points: number = 0;
 
   constructor(private toastr: ToastrService,
-              private service: MayorMenorService,
-              public auth: AuthService,
-              public spinnerService: SpinnerService) {}
+    private service: MayorMenorService,
+    public auth: AuthService,
+    public spinnerService: SpinnerService) { }
 
 
   ngOnInit(): void {
@@ -37,7 +37,7 @@ export class MayorMenorPageComponent implements OnInit {
     });
   }
 
-  storeCard(data) {    
+  storeCard(data) {
     if (data.cards[0].value === 'JACK') {
       this.cardValue = 11;
     } else if (data.cards[0].value === 'QUEEN') {
@@ -58,17 +58,17 @@ export class MayorMenorPageComponent implements OnInit {
     this.getRandomCard().then(() => {
       console.log(this.oldCardValue);
       console.log(this.cardValue);
-      if (option === 'mayor') {
+      if (option === 'greater') {
         if (this.cardValue > this.oldCardValue) {
           this.win();
         } else if (this.cardValue < this.oldCardValue) {
           this.lose();
         }
       }
-      if (option === 'menor') {
+      if (option === 'lower') {
         if (this.cardValue < this.oldCardValue) {
           this.win();
-        } else  if (this.cardValue > this.oldCardValue){
+        } else if (this.cardValue > this.oldCardValue) {
           this.lose();
         }
       }
@@ -81,7 +81,7 @@ export class MayorMenorPageComponent implements OnInit {
   }
 
   lose() {
-    this.auth.SetScore("mayor-menor",this.points);
+    this.auth.SetScore("greater-or-lower", this.points);
     this.result = false;
     this.showResult();
     this.points = 0;
@@ -90,7 +90,7 @@ export class MayorMenorPageComponent implements OnInit {
   showResult() {
     this.toastr.warning('Puntuación final: ' + this.points + ' points', 'GAME OVER...', {
       timeOut: 3000,
-      positionClass: 'toast-center-center',      
+      positionClass: 'toast-center-center',
     });
   }
 }
