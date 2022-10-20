@@ -13,7 +13,7 @@ import { ChatComponent } from './chat/chat.component';
 import { MayorMenorPageComponent } from './greater-or-less-page/greater-or-less-page.component';
 import { PreguntadosPageComponent } from './preguntados-page/preguntados-page.component';
 import { SnakePageComponent } from './snake-page/snake-page.component';
-import { EncuestaPageComponent } from './encuesta-page/encuesta-page.component';
+import { EncuestaPageComponent } from './poll-page/poll-page.component';
 
 @NgModule({
   declarations: [

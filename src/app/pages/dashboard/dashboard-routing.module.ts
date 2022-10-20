@@ -7,7 +7,7 @@ import { MayorMenorPageComponent } from './greater-or-less-page/greater-or-less-
 import { PreguntadosPageComponent } from './preguntados-page/preguntados-page.component';
 import { SnakePageComponent } from './snake-page/snake-page.component';
 import { CvPageComponent } from '../cv-page/cv-page.component';
-import { EncuestaPageComponent } from './encuesta-page/encuesta-page.component';
+import { EncuestaPageComponent } from './poll-page/poll-page.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 
 const routes: Routes = [
