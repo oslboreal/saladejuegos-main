@@ -4,7 +4,7 @@
 
     <div class="col-md-8">
       <div class="h-100 p-5 text-bg-dark rounded-3">
-        <h1>PERFIL</h1>
+        <h1>PROFILE</h1>
         <hr>
         <div *ngIf="authService.userData as user">
           <div class="row align-items-md-stretch">
@@ -18,22 +18,22 @@
             </div>
           </div>
           <hr>
-          <h1>TUS PUNTUACIONES MAXIMAS</h1>
+          <h1>YOUR BEST SCORE</h1>
           <hr>
           <div>
-            <p *ngIf="preguntadosScore; else elseBlock">PREGUNTADOS: {{preguntadosScore}} PUNTOS</p>
-            <ng-template #elseBlock>PREGUNTADOS: 0 PUNTOS</ng-template>
+            <p *ngIf="preguntadosScore; else elseBlock">PREGUNTADOS: {{preguntadosScore}} POINTS</p>
+            <ng-template #elseBlock>PREGUNTADOS: 0 POINTS</ng-template>
           </div>
           <div>
-            <p *ngIf="snakeScore; else elseBlock2">LA VIBORA: {{snakeScore}} PUNTOS</p>
-            <ng-template #elseBlock2>LA VIBORA: 0 PUNTOS</ng-template>
+            <p *ngIf="snakeScore; else elseBlock2">LA VIBORA: {{snakeScore}} POINTS</p>
+            <ng-template #elseBlock2>LA VIBORA: 0 POINTS</ng-template>
           </div>
           <div>
-            <p *ngIf="mayorMenorScore; else elseBlock3">MAYOR O MENOR: {{mayorMenorScore}} PUNTOS</p>
-            <ng-template #elseBlock3>MAYOR O MENOR: 0 PUNTOS</ng-template>
+            <p *ngIf="mayorMenorScore; else elseBlock3">MAYOR O MENOR: {{mayorMenorScore}} POINTS</p>
+            <ng-template #elseBlock3>MAYOR O MENOR: 0 POINTS</ng-template>
           </div>
           <hr>
-          <h1>SALON DE LA FAMA</h1>
+          <h1>HALL OF THE FAME</h1>
           <hr>
           <p>PREGUNTADOS: {{preguntadosHighScore}} PUNTOS - JUGADOR: {{ preguntadosHighScoreUser}} </p>
           
