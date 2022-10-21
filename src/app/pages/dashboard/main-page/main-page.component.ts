@@ -34,7 +34,6 @@ export class MainPageComponent implements OnInit {
     this.getScores();
   }
 
-
   getScores() {
     this.getUserHighScores('preguntados').then((score) => {
       this.preguntadosScore = score;
