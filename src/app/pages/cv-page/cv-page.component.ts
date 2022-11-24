@@ -14,7 +14,7 @@ export class CvPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  backClicked() {
+  homeClicked() {
     this._location.back();
   }
 }
