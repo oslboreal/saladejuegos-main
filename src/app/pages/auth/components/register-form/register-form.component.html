@@ -1,43 +1,43 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
-    <mat-form-field class="form-control">
-      <mat-label>Correo electronico</mat-label>
-      <input matInput formControlName="email" type="text" required />
-      <mat-error *ngIf="email?.hasError('required')">
-        El correo electronico es obligatorio
-      </mat-error>
-      <mat-error *ngIf="email?.hasError('email')">
-        El correo electrónico no es válido. Por favor introduzca una dirección de correo electrónico válida.
-      </mat-error>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="form-control">
-      <mat-label>Usuario</mat-label>
-      <input matInput formControlName="user" type="text" required />
-      <mat-error *ngIf="user?.hasError('required')">
-        El Usuario es obligatorio
-      </mat-error>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="form-control">
-      <mat-label>Contraseña</mat-label>
-      <input matInput formControlName="password" type="password"  required />
-      <mat-error *ngIf="password?.hasError('required')">
-        La contraseña es obligatoria.
-      </mat-error>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="form-control">
-      <mat-label>Confirmar contraseña</mat-label>
-      <input matInput formControlName="password2" type="password"  required />
-      <mat-error *ngIf="password2?.hasError('required')">
-        La confirmación de la contraseña es obligatoria.
-      </mat-error>
-    </mat-form-field>
-    <br>
-    <div class="form-footer">
-      <button [disabled]="form.invalid" mat-raised-button type="submit">
-        Enviar
-      </button>
-    </div>
-    <br>
-  </form>
+  <mat-form-field class="form-control">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" type="text" required />
+    <mat-error *ngIf="email?.hasError('required')">
+      The email is mandatory.
+    </mat-error>
+    <mat-error *ngIf="email?.hasError('email')">
+      The email is invalid
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="form-control">
+    <mat-label>User</mat-label>
+    <input matInput formControlName="user" type="text" required />
+    <mat-error *ngIf="user?.hasError('required')">
+      The user is mandatory
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="form-control">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" type="password" required />
+    <mat-error *ngIf="password?.hasError('required')">
+      The password is required
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="form-control">
+    <mat-label>Confirm password</mat-label>
+    <input matInput formControlName="password2" type="password" required />
+    <mat-error *ngIf="password2?.hasError('required')">
+      Please re-type the password.
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <div class="form-footer">
+    <button [disabled]="form.invalid" mat-raised-button type="submit">
+      Sign up
+    </button>
+  </div>
+  <br>
+</form>

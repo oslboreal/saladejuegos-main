@@ -7,7 +7,6 @@ const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
 const redirectLoggedInToAdmin = () => redirectLoggedInTo(['admin-dashboard']);
 
-
 const routes: Routes = [
   {
     path: '',

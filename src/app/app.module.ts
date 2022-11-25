@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { NgModule } from '@angular/core';
 import { CustomHttpInterceptor } from './shared/services/http-interceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,

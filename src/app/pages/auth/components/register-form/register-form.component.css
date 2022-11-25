@@ -1,17 +1,16 @@
 button {
-    background-color: #5eccd6;
-    color: #fff;
-    padding: 0 50px;
-  }
-  
-  form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  
-  mat-form-field {
-    width: 300%;
-  }
+  background-color: #003dc0;
+  color: #fff;
+  padding: 0 50px;
+}
 
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+mat-form-field {
+  width: 300%;
+}

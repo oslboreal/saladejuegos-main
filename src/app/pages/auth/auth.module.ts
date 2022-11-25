@@ -10,6 +10,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
+
 @NgModule({
   declarations: [LoginPageComponent, LoginFormComponent, RegisterPageComponent, RegisterFormComponent],
   imports: [
@@ -21,4 +23,4 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     MatButtonModule,
   ],
 })
-export class AuthModule {}
+export class AuthModule { }

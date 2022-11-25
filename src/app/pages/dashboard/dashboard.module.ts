@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
-import { FooterPageComponent } from './footer-page/footer-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AhorcadoPageComponent } from './ahorcado-page/ahorcado-page.component';
 import { RouterModule } from '@angular/router';
@@ -14,12 +13,14 @@ import { MayorMenorPageComponent } from './greater-or-less-page/greater-or-less-
 import { PreguntadosPageComponent } from './preguntados-page/preguntados-page.component';
 import { SnakePageComponent } from './snake-page/snake-page.component';
 import { PollPageComponent } from './poll-page/poll-page.component';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
+    FooterComponent,
     DashboardComponent,
     NavbarPageComponent,
-    FooterPageComponent,
     MainPageComponent,
     AhorcadoPageComponent,
     ChatComponent,

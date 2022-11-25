@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { LoginData } from 'src/app/interfaces/login-data.interface';
 import { Router } from '@angular/router';
@@ -18,9 +18,9 @@ export class LoginPageComponent implements OnInit {
     private readonly authService: AuthService,
     private readonly router: Router,
     private toastr: ToastrService
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   login(loginData: LoginData) {
     this.authService
