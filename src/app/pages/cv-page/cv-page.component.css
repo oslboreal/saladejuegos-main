@@ -1,6 +1,4 @@
 .btn {
-    background-color: #0004f8;
-    color: #fff;
     padding: 10px 30px;
     text-decoration: none;
     transition: 0.5s background-color;
@@ -12,7 +10,6 @@
 }
 
 .btn:hover {
-    background-color: #52b7c0;
 }
 
 .navbar {
