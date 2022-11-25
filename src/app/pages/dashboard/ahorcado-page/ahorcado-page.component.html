@@ -91,7 +91,6 @@
 
       </div>
     </div>
-
     <div class="col-md-3 ">
       <div class="h-100 p-5 bg-light border rounded-3">
         <img src={{triesImg}} alt="hangman" width="max" height="200">
@@ -105,13 +104,11 @@
         <div class="row" *ngIf="lost">
           <div class="col text-center">
             <h3 class="lost">GAME OVER...</h3>
-            <p class="lost">La palabra era: <a style="font-weight: bold;">{{word}}</a></p>
+            <p class="lost">The right word was: <a style="font-weight: bold;">{{word}}</a></p>
             <button class="btn btn-primary" (click)="reload()">Try again</button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </div>
