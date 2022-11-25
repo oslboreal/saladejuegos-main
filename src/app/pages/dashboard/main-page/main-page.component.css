@@ -1,0 +1,10 @@
+.chat-container{
+    position: absolute;
+    top: 24%;
+    right: 0%;
+    background: transparent;
+}
+
+.profile-information{
+    text-align: center;
+}

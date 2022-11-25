@@ -8,7 +8,6 @@
   
  
   button {
-    border-radius: 20px;
     padding: 5px;
   }
   
@@ -25,7 +24,6 @@
   }
   
   .login-container {
-    border-radius: 10px;
     box-shadow: 0 0 20px 2px #e4e4e4;
     display: flex;
     width: 80%;
@@ -34,7 +32,6 @@
   .text-container {
     align-items: center;
     background-color: #00647e;
-    border-radius: 0 10px 10px 0;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -46,7 +43,6 @@
   .form-container {
     align-items: center;
     background-color: #fff;
-    border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

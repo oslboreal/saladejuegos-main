@@ -1,10 +1,14 @@
 .btn {
-    background-color: #00647e;
-    border-radius: 20px;
+    background-color: #0004f8;
     color: #fff;
     padding: 10px 30px;
     text-decoration: none;
     transition: 0.5s background-color;
+}
+
+.main-wrapper
+{
+    color: white;
 }
 
 .btn:hover {

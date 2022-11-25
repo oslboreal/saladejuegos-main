@@ -1,22 +1,22 @@
 <div class="container">
 
   <div class="row align-items-md-stretch">
-    <div class="col-md-4 ">
-      <div class="h-100 p-5 bg-light border rounded-3">
+    <div class="col-md-0 ">
+      <div class="chat-container h-100 p-5">
         <app-chat></app-chat>
       </div>
     </div>
-    <div class="col-md-8">
-      <div class="h-100 p-5 text-bg-dark rounded-3">
+    <div class="col-md-12">
+      <div class="profile-information h-100 p-5 text-bg-dark">
         <h1>PROFILE</h1>
         <hr>
         <div *ngIf="authService.userData as user">
           <div class="row align-items-md-stretch">
-            <div class="col-md-2">
-              <img class="img-thumbnail img-fluid" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+            <div class="col-md-12 info">
+              <img class="img-thumbnail img-fluid" style="width: 5rem; margin-bottom: 1rem;"
+                src="https://www.kindpng.com/picc/m/72-723761_student-png-sammilani-mahavidyalaya-undergraduate-and-dummy-user.png"
                 alt="{{user.displayName}}">
-            </div>
-            <div class="col-md-6 info">
+              <br>
               <p>Usuario: <strong>{{(user.displayName)}}</strong></p>
               <p>Email: <strong>{{user.email}}</strong></p>
             </div>

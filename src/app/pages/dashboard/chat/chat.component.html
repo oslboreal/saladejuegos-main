@@ -2,11 +2,10 @@
     <div class="card" id="chat1" style="">
         <div class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
             style="">
-            <p class="mb-0 fw-bold">CHAT</p>
+            <p class="mb-0 fw-bold">CHAT</p>X
         </div>
-        <div class="card-body app-message " 
-             data-mdb-perfect-scrollbar="true"
-             style="position: relative; height: 400px; padding: 3%;">
+        <div class="card-body app-message " data-mdb-perfect-scrollbar="true"
+            style="position: relative; height: 400px; padding: 3%;">
 
 
             <div *ngFor="let chat of chatService.chats">
@@ -15,17 +14,16 @@
 
                     <div class="d-flex flex-row justify-content-end mb-4 pt-1 text-right">
                         <div>
-                            <p class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary"> 
+                            <p class="small p-2 me-3 mb-1 text-white bg-primary">
                                 {{chat.name}} <br> {{chat.message}}
                             </p>
-                            <p class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                            <p class="small me-3 mb-3 text-muted d-flex justify-content-end">
                                 {{chat.date}}
                             </p>
                         </div>
                         <img src="{{(chat.photo) ? chat.photo : '/assets/dummy-user.png'}}"
-                             alt="{{chatService.userLog.displayName}}" 
-                             style="width: 45px; height: 100%;"
-                             class="img-thumbnail">
+                            alt="{{chatService.userLog.displayName}}" style="width: 45px; height: 100%;"
+                            class="img-thumbnail">
                     </div>
                 </div>
 
@@ -33,17 +31,15 @@
 
                     <div class="d-flex flex-row justify-content-start text-left">
                         <img src="{{(chat.photo) ? chat.photo : '/assets/dummy-user.png'}}"
-                             alt="{{chatService.userLog.displayName}}" 
-                             style="width: 45px; height: 100%;"
-                             class="img-thumbnail">
+                            alt="{{chatService.userLog.displayName}}" style="width: 45px; height: 100%;"
+                            class="img-thumbnail">
                         <div>
-                            <p class="small p-2 ms-3 mb-1 rounded-3" 
-                               style="background-color: #f5f6f7;">
+                            <p class="small p-2 ms-3 mb-1" style="background-color: #f5f6f7;">
                                 {{chat.name}}
                                 <br>
                                 {{chat.message}}
                             </p>
-                            <p class="small ms-3 mb-3 rounded-3 text-muted">
+                            <p class="small ms-3 mb-3 text-muted">
                                 {{chat.date}}
                             </p>
                         </div>
@@ -53,11 +49,6 @@
         </div>
     </div>
     <br>
-    <input type="text" 
-           name="message" 
-           [(ngModel)]="message" 
-           (keyup.enter)="sendMessage()" 
-           class="form-control"
-           id="app-message-input" 
-           placeholder="Escribe tu mensaje...">
+    <input type="text" name="message" [(ngModel)]="message" (keyup.enter)="sendMessage()" class="form-control"
+        id="app-message-input" placeholder="Type your message...">
 </div>

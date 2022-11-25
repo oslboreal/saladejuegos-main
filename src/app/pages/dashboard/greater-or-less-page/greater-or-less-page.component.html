@@ -1,6 +1,6 @@
 <div class="container py-1">
 
-  <div class="p-2 mb-2 bg-light rounded-3">
+  <div class="p-2 mb-2 bg-light">
     <div class="container-fluid py-1">
       <div>
         <h2>GREATER OR LOWER</h2>
@@ -14,7 +14,7 @@
   <div class="row align-items-md-stretch">
 
     <div class="col-md-6">
-      <div class="p-5 bg-light border rounded-3 text-center" style="height: 400px">
+      <div class="p-5 bg-light border text-center" style="height: 400px">
         <div class="d-flex justify-content-center">
           <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"
             *ngIf="spinnerService.visibility | async; else elseBlock">
@@ -54,7 +54,7 @@
     </div>
 
     <div class="col-md-6">
-      <div class="p-5 bg-light border rounded-3">
+      <div class="p-5 bg-light border">
         <button class="btn btn-primary" style="width:100%" (click)="chosenOption('greater')">GREATER</button>
         <br>
         <br>

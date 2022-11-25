@@ -1,6 +1,5 @@
 .btn {
-    background-color: #00647e;
-    border-radius: 20px;
+    background-color: #0451c4;
     color: #fff;
     padding: 10px 30px;
     text-decoration: none;
@@ -8,12 +7,9 @@
 }
 
 .btn:hover {
-    background-color: #52b7c0;
+    background-color: #031fc0;
 }
 
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    height: 64px;
     padding: 0 30px;
 }
