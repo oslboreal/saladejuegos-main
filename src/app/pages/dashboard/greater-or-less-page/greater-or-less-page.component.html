@@ -25,14 +25,14 @@
         <div class="row align-items-md-stretch">
           <ng-template #elseBlock>
             <div class="col-md-6">
-              <p>Carta anterior</p>
+              <p>Previous Card</p>
               <img src="{{(oldCardImage) ? oldCardImage : '/assets/higher-lower/cardback.png'}}" alt="cardImg"
                 width="max" height="200">
               <br>
               <br>
             </div>
             <div class="col-md-6">
-              <p>Carta Actual</p>
+              <p>Current card</p>
               <img src={{cardImage}} alt="cardImg" width="max" height="200">
               <br>
               <br>
@@ -61,10 +61,8 @@
         <button class="btn btn-primary" style="width:100%" (click)="chosenOption('lower')">LOWER</button>
         <br>
         <br>
-        <p>Puntaje: {{points}}</p>
+        <p>Points: {{points}}</p>
       </div>
     </div>
-
   </div>
-
 </div>
