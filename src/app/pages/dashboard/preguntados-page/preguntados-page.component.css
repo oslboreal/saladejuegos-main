@@ -2,3 +2,7 @@
     color:white;
     text-align: center;
 }
+
+.game-box {
+    border-radius: 10px;
+}

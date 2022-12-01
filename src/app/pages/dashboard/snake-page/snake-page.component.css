@@ -2,11 +2,16 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .cells .cell {
     border: 1px solid #eee;
 }
 
-.container{
+.game-box {
+    border-radius: 10px;
+}
+
+.container {
     color: white;
     text-align: center;
 }
