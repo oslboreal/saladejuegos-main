@@ -29,18 +29,18 @@ export class AuthService {
 
   userData: any; // Save logged in user data
   now = new Date();
-  isLogin = false;    
+  isLogin = false;
   roleAs: string;
 
   constructor(private auth: Auth,
-              public afAuth: AngularFireAuth,
-              public afs: AngularFirestore, // Inject Firebase auth service
-    ) {
+    public afAuth: AngularFireAuth,
+    public afs: AngularFirestore, // Inject Firebase auth service
+  ) {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user')!);        
+        JSON.parse(localStorage.getItem('user')!);
       } else {
         localStorage.setItem('user', 'null');
         JSON.parse(localStorage.getItem('user')!);
@@ -50,49 +50,49 @@ export class AuthService {
 
   login({ email, password }: LoginData) {
     return signInWithEmailAndPassword(this.auth, email, password)
-    .then((result) => {      
-      this.SetUserData(result.user);
-      this.isLogin = true;
-      this.roleAs = this.userData.role;
-      localStorage.setItem('STATE', 'true');
-      localStorage.setItem('ROLE', this.roleAs)
-      return of({ success: this.isLogin, role: this.roleAs });
-    })
+      .then((result) => {
+        this.SetUserData(result.user);
+        this.isLogin = true;
+        this.roleAs = this.userData.role;
+        localStorage.setItem('STATE', 'true');
+        localStorage.setItem('ROLE', this.roleAs)
+        return of({ success: this.isLogin, role: this.roleAs });
+      })
   }
 
   loginWithGoogle() {
     return signInWithPopup(this.auth, new GoogleAuthProvider())
-    .then((result) => {
-      this.SetUserData(result.user);
-      this.isLogin = true;
-      this.roleAs = this.userData.role;
-      localStorage.setItem('STATE', 'true');
-      localStorage.setItem('ROLE', this.roleAs)
-      return of({ success: this.isLogin, role: this.roleAs });
-    })
+      .then((result) => {
+        this.SetUserData(result.user);
+        this.isLogin = true;
+        this.roleAs = this.userData.role;
+        localStorage.setItem('STATE', 'true');
+        localStorage.setItem('ROLE', this.roleAs)
+        return of({ success: this.isLogin, role: this.roleAs });
+      })
   }
 
   register({ email, user, password }: RegisterData) {
     console.log(email, user, password);
     return this.afAuth.createUserWithEmailAndPassword(email, password)
-    .then(credential => {
-      credential.user.updateProfile({
-        displayName: user,
-     })
-      this.SetUserData(credential.user);
-    })
+      .then(credential => {
+        credential.user.updateProfile({
+          displayName: user,
+        })
+        this.SetUserData(credential.user);
+      })
   }
 
   logout() {
     return signOut(this.auth)
-    .then((result) => {
-      localStorage.removeItem('user');
-      this.isLogin = false;
-      this.roleAs = '';
-      localStorage.setItem('STATE', 'false');
-      localStorage.setItem('ROLE', '');
-      return of({ success: this.isLogin, role: '' });
-    })
+      .then((result) => {
+        localStorage.removeItem('user');
+        this.isLogin = false;
+        this.roleAs = '';
+        localStorage.setItem('STATE', 'false');
+        localStorage.setItem('ROLE', '');
+        return of({ success: this.isLogin, role: '' });
+      })
   }
 
   SetUserData(user: any) {
@@ -116,13 +116,13 @@ export class AuthService {
     const userDataLog: any = {
       displayName: user.displayName,
       email: user.email,
-      loginDate : this.now.toLocaleString()
+      loginDate: this.now.toLocaleString()
     };
 
     userLog.set(userDataLog, {
       merge: false,
     });
-    
+
     return userRef.set(userData, {
       merge: true,
     });
@@ -153,38 +153,40 @@ export class AuthService {
   getUserHighScore(game: any) {
     var data;
     return firebase.firestore().collection('scores')
-                               .where('game', '==', game)
-                               .where('user', '==', this.auth.currentUser.displayName)
-                               .orderBy('score', 'desc').limit(1)
-                               .get()
-                               .then((querySnapshot) => {
-                                 querySnapshot.forEach((doc) => {
-                                     data = doc.data()['score'];
-                                 });
-                                 console.log(data);
-                                 return data;
-                               })
-                               .catch((error) => {
-                                 console.log("Error getting documents: ", error);
-                               });
+      .where('game', '==', game)
+      .where('user', '==', this.auth.currentUser.displayName)
+      .orderBy('score', 'desc').limit(1)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log('Getting documents');
+
+          data = doc.data()['score'];
+        });
+        console.log(data);
+        return data;
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
   }
 
   getGameHighScore(game: any) {
     var data;
     return firebase.firestore().collection('scores')
-                               .where('game', '==', game)
-                               .orderBy('score', 'desc').limit(1)
-                               .get()
-                               .then((querySnapshot) => {
-                                 querySnapshot.forEach((doc) => {
-                                     data = doc.data();
-                                 });
-                                 console.log(data);
-                                 return data;
-                               })
-                               .catch((error) => {
-                                 console.log("Error getting documents: ", error);
-                               });
+      .where('game', '==', game)
+      .orderBy('score', 'desc').limit(1)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          data = doc.data();
+        });
+        console.log(data);
+        return data;
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
   }
 
   SetUserSurvey(data: any) {
@@ -197,12 +199,12 @@ export class AuthService {
       lastName: data.lastName,
       phone: data.phone,
       age: data.age,
-      favGame:  data.favGame,
+      favGame: data.favGame,
       experience: data.experience,
       opinion: data.opinion,
       user: this.auth.currentUser.displayName
     };
- 
+
     return userRef.set(survey, {
       merge: true,
     });

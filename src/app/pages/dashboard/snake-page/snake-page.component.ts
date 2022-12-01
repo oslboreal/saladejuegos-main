@@ -10,9 +10,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./snake-page.component.css']
 })
 export class SnakePageComponent implements OnInit {
-
   constructor(public auth: AuthService) { }
-
   readonly size = 30;
   readonly gridSize = this.size * this.size;
   readonly cellWidth = 10; // in px
@@ -39,7 +37,9 @@ export class SnakePageComponent implements OnInit {
         this.dead = this.snake.checkDead();
         if (this.dead) {
           console.log(this.snake.tail.length + 1 - 3);
-          this.auth.SetScore("snake",this.snake.tail.length + 1 - 3);
+
+          /* Set points based on snake length */
+          this.auth.SetScore('snake', this.snake.tail.length + 1 - 3);
         }
         this.time++;
         if (!this.dead) {
@@ -113,7 +113,7 @@ export class SnakePageComponent implements OnInit {
 
   playAgain() {
     window.location.reload();
-  }  
+  }
 
 }
 
