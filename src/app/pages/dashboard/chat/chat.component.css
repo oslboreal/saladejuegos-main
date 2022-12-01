@@ -1,7 +1,7 @@
 
   
   .card-header{
-    background-color: black !important;
+    background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
   }
   
   .chat-window{
