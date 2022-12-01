@@ -8,3 +8,8 @@
 .profile-information{
     text-align: center;
 }
+
+.container{
+    width: 50%;
+    background: transparent;
+}

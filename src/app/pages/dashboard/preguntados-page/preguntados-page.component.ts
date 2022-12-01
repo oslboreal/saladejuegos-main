@@ -58,15 +58,15 @@ export class PreguntadosPageComponent implements OnInit {
 
   checkAnswer(answer) {
     if (answer === this.characterName) {
-      this.toastr.success('Correcto!', '', {
+      this.toastr.success('Right!', '', {
         timeOut: 3000,
         positionClass: 'toast-center-center',
       });
       this.points++;
     } else {
       this.auth.SetScore("preguntados", this.points);
-      this.toastr.warning('Puntaje: ' + this.points,
-        'Incorrecto!' + ' ' + 'La respuesta correcta es:' + ' ' + this.characterName, {
+      this.toastr.warning('Points: ' + this.points,
+        'Wrong!' + ' ' + 'The right answer is:' + ' ' + this.characterName, {
         timeOut: 3000,
         positionClass: 'toast-center-center',
       });
