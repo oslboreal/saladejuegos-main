@@ -12,4 +12,13 @@
 .container{
     width: 50%;
     background: transparent;
+    color: white;
+}
+
+.userProfile{
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: black;
+    margin-bottom: 1rem;
 }

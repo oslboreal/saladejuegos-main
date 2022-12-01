@@ -7,37 +7,34 @@
     </div>
     <div class="col-md-12">
       <div class="profile-information h-100 p-5 text-bg-dark">
-        <h1>PROFILE</h1>
-        <hr>
         <div *ngIf="authService.userData as user">
-          <div class="row align-items-md-stretch">
-            <div class="col-md-12 info">
-              <img class="img-thumbnail img-fluid" style="width: 5rem; margin-bottom: 1rem;"
-                src="https://www.kindpng.com/picc/m/72-723761_student-png-sammilani-mahavidyalaya-undergraduate-and-dummy-user.png"
-                alt="{{user.displayName}}">
-              <br>
-              <p>Usuario: <strong>{{(user.displayName)}}</strong></p>
-              <p>Email: <strong>{{user.email}}</strong></p>
+          <div class="userProfile">
+            <div class="row align-items-md-stretch">
+              <div class="col-md-12 info">
+                <img class="img-thumbnail img-fluid" style="width: 5rem; margin-bottom: 1rem;"
+                  src="https://www.kindpng.com/picc/m/72-723761_student-png-sammilani-mahavidyalaya-undergraduate-and-dummy-user.png"
+                  alt="{{user.displayName}}">
+                <br>
+                <p>Usuario: <strong>{{(user.displayName)}}</strong></p>
+                <p>Email: <strong>{{user.email}}</strong></p>
+              </div>
             </div>
           </div>
-          <hr>
           <h1>YOUR BEST SCORE</h1>
-          <hr>
-          <div>
-            <p *ngIf="preguntadosScore; else elseBlock">PREGUNTADOS: {{preguntadosScore}} POINTS</p>
-            <ng-template #elseBlock>PREGUNTADOS: 0 POINTS</ng-template>
-          </div>
           <div>
             <p *ngIf="snakeScore; else elseBlock2">SNAKE: {{snakeScore}} POINTS</p>
-            <ng-template #elseBlock2>SNAKE: 0 POINTS</ng-template>
+            <ng-template #elseBlock2><p>SNAKE: 0 POINTS</p></ng-template>
+          </div>
+          <div>
+            <p *ngIf="preguntadosScore; else elseBlock">PREGUNTADOS: {{preguntadosScore}} POINTS</p>
+            <ng-template #elseBlock><p>PREGUNTADOS: 0 POINTS</p></ng-template>
           </div>
           <div>
             <p *ngIf="mayorMenorScore; else elseBlock3">GREATER OR LOWER: {{mayorMenorScore}} POINTS</p>
-            <ng-template #elseBlock3>GREATER OR LOWER: 0 POINTS</ng-template>
+            <ng-template #elseBlock3><p>GREATER OR LOWER: 0 POINTS</p></ng-template>
           </div>
           <hr>
           <h1>HALL OF THE FAME</h1>
-          <hr>
 
           <p>SNAKE: {{snakeHighScore}} POINTS - PLAYER: {{ snakeHighScoreUser}} </p>
           <p>PREGUNTADOS: {{preguntadosHighScore}} POINTS - PLAYER: {{ preguntadosHighScoreUser}} </p>

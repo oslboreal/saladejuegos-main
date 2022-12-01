@@ -103,6 +103,4 @@ export class MainPageComponent implements OnInit {
     });
     return result;
   }
-
-
 }

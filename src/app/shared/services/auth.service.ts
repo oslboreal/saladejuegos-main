@@ -133,7 +133,6 @@ export class AuthService {
   }
 
   SetScore(game: any, score: any) {
-
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `scores/${this.now + '-' + this.userData.displayName}`
     );
@@ -172,7 +171,7 @@ export class AuthService {
   }
 
   getGameHighScore(game: any) {
-    var data;
+    let data;
     return firebase.firestore().collection('scores')
       .where('game', '==', game)
       .orderBy('score', 'desc').limit(1)
