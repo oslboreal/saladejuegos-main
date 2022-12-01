@@ -6,6 +6,10 @@
     transition: 0.5s background-color;
 }
 
+.navbar{
+    color: white;
+}
+
 .btn:hover {
     background-color: #031fc0;
 }

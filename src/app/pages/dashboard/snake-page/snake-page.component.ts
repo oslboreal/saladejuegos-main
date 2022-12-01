@@ -13,7 +13,7 @@ export class SnakePageComponent implements OnInit {
 
   constructor(public auth: AuthService) { }
 
-  readonly size = 20;
+  readonly size = 30;
   readonly gridSize = this.size * this.size;
   readonly cellWidth = 10; // in px
   readonly cells = new Array(this.size * this.size);

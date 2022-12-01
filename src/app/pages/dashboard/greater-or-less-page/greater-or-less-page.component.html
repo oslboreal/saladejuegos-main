@@ -1,9 +1,9 @@
 <div class="container py-1">
 
-  <div class="p-2 mb-2 bg-light">
+  <div class="game-box p-2 mb-2 bg-dark">
     <div class="container-fluid py-1">
       <div>
-        <h2>GREATER OR LOWER</h2>
+        <h2>↗ GREATER OR LOWER ↘</h2>
         <p>
           Take a guess, pick an option between greater or lower.
         <p>
@@ -11,58 +11,49 @@
     </div>
   </div>
 
-  <div class="row align-items-md-stretch">
+  <div class="p-5 bg-dark text-center">
 
-    <div class="col-md-6">
-      <div class="p-5 bg-light border text-center" style="height: 400px">
-        <div class="d-flex justify-content-center">
-          <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"
-            *ngIf="spinnerService.visibility | async; else elseBlock">
-            <span class="sr-only"></span>
-          </div>
-        </div>
-
-        <div class="row align-items-md-stretch">
-          <ng-template #elseBlock>
-            <div class="col-md-6">
-              <p>Previous Card</p>
-              <img src="{{(oldCardImage) ? oldCardImage : '/assets/higher-lower/cardback.png'}}" alt="cardImg"
-                width="max" height="200">
-              <br>
-              <br>
-            </div>
-            <div class="col-md-6">
-              <p>Current card</p>
-              <img src={{cardImage}} alt="cardImg" width="max" height="200">
-              <br>
-              <br>
-            </div>
-          </ng-template>
-        </div>
-        <div *ngIf="result == true" class="alert alert-success" role="alert">
-          ¡YOU WIN!
-        </div>
-        <div *ngIf="result == false" class="alert alert-danger" role="alert">
-          GAME OVER...
-        </div>
-        <div *ngIf="result == null">
-          <br>
-          <br>
-          <br>
-        </div>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"
+        *ngIf="spinnerService.visibility | async;">
+        <span class="sr-only"></span>
       </div>
     </div>
 
-    <div class="col-md-6">
-      <div class="p-5 bg-light border">
-        <button class="btn btn-primary" style="width:100%" (click)="chosenOption('greater')">GREATER</button>
+    <div class="row" *ngIf="!(spinnerService.visibility | async) && result == null;">
+      <div class="col-md-6">
+        <p>Previous Card</p>
+        <img src="{{(oldCardImage) ? oldCardImage : '/assets/higher-lower/cardback.png'}}" alt="cardImg" width="max"
+          height="150">
         <br>
+        <br>
+      </div>
+
+      <div class="col-md-6 bg-dark">
+        <p>Current card</p>
+        <img src={{cardImage}} alt="cardImg" width="max" height="150">
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="!(spinnerService.visibility | async) && result == null;">
+      <div class="col-md-12 bg-dark">
+        <button class="btn btn-primary" style="width:100%" (click)="chosenOption('greater')">GREATER</button>
         <br>
         <button class="btn btn-primary" style="width:100%" (click)="chosenOption('lower')">LOWER</button>
         <br>
         <br>
         <p>Points: {{points}}</p>
       </div>
+    </div>
+
+    <div *ngIf="result == true" class="alert alert-success" role="alert">
+      ¡YOU WIN!
+    </div>
+
+    <div *ngIf="result == false" class="alert alert-danger" role="alert">
+      GAME OVER...
     </div>
   </div>
 </div>

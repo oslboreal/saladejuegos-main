@@ -1,9 +1,9 @@
 <div class="container py-1">
 
-  <div class="p-2 mb-2 bg-light">
+  <div class="p-2 mb-2 bg-dark">
     <div class="container-fluid py-1">
       <div>
-        <h2>HANGMAN GAME</h2>
+        <h2>🙇 HANGMAN GAME ☠</h2>
         <p>You are shown a set of blank letters that match a word or phrase and you have to guess what these letters are
           to reveal the hidden word. You guess by picking letters from those displayed on the sides. If you pick a
           letter that is in the word, a sound is played and that letter is revealed from the blank letters; however, if
@@ -16,7 +16,7 @@
   <div class="row align-items-md-stretch">
 
     <div class="col-md-9">
-      <div class="h-100 p-5 bg-light border">
+      <div class="h-100 p-5 bg-dark">
 
         <div id="buttons">
           <div class="column">
@@ -79,20 +79,13 @@
           </div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <h1>{{hiddenWord}}</h1>
         <p>TRIES &nbsp;{{ tries }} / 7</p>
 
       </div>
     </div>
     <div class="col-md-3 ">
-      <div class="h-100 p-5 bg-light border">
+      <div class="h-100 p-5 bg-dark">
         <img src={{triesImg}} alt="hangman" width="max" height="200">
         <br>
         <div class="row" *ngIf="win">
